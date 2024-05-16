@@ -1,0 +1,22 @@
+# The Python packages we need to install for the project
+
+tensorflow
+pandas 
+dvc
+notebook
+numpy
+matplotlib
+seaborn
+python-box == 6.0.2
+# Use YAML files with python
+pyYAML
+tqdm # Progress bar
+ensure == 1.0.2
+joblib
+types-PyYAML
+scipy
+# Web application
+Flask
+Flask-Cors
+
+-e .
