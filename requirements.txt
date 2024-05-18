@@ -7,11 +7,11 @@ notebook
 numpy
 matplotlib
 seaborn
-python-box == 6.0.2 # Exception handling
+python-box # Exception handling
 # Use YAML files with python
 pyYAML
 tqdm # Progress bar
-ensure == 1.0.2
+ensure
 joblib
 types-PyYAML
 scipy
