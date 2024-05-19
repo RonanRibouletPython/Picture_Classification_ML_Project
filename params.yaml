@@ -1,2 +1,10 @@
-# We need to make this file not empty with a dummy value
-key: value
+# Create the parameters for the model
+# The model comes from keras: https://keras.io/api/applications/
+AUGMENTATION: True
+IMAGE_SIZE: [224, 224, 3] # see input shape of the model
+BATCH_SIZE: 16
+INCLUDE_TOP: False # We use the pretrained model so we want to train the custom layers only
+EPOCHS: 1 # train for one epoch
+CLASSES: 2 # Binary classification
+WEIGHTS: imagenet 
+LEARNING_RATE: 0.01
