@@ -1,10 +1,18 @@
 # Import the log handler
 from CNN_Classification_Task import logger
+from CNN_Classification_Task.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
-# Debugging tests for module imports
-from CNN_Classification_Task.utils.common import *
+# Data ingestion stage
+STAGE_NAME = "Data Ingestion stage"
 
-test = ["test"]
-create_directories(test)
+try:
+   logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
 
-logger.info("Customed logger")
+   data_ingestion = DataIngestionTrainingPipeline()
+   data_ingestion.main()
+
+   logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+
+except Exception as e:
+        logger.exception(e)
+        raise e
