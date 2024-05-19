@@ -34,3 +34,15 @@ class PrepareBaseModelConfig:
 
 ################################
 
+################################
+
+# Model callbacks configuration
+
+@dataclass(frozen = True)
+class PrepareCallbacksConfig:
+    root_dir: Path
+    tensorboard_root_log_dir: Path
+    checkpoint_model_filepath: Path
+
+#################################
+
