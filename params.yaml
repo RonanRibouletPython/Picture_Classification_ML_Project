@@ -8,3 +8,4 @@ EPOCHS: 1 # train for one epoch
 CLASSES: 2 # Binary classification
 WEIGHTS: imagenet 
 LEARNING_RATE: 0.01
+
