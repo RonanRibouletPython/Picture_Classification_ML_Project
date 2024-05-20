@@ -1,7 +1,7 @@
 
 import os
 from CNN_Classification_Task.constants import *
-from CNN_Classification_Task.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, PrepareCallbacksConfig, TrainingConfig
+from CNN_Classification_Task.entity.config_entity import DataIngestionConfig, EvaluationConfig, PrepareBaseModelConfig, PrepareCallbacksConfig, TrainingConfig
 from CNN_Classification_Task.utils.common import read_yaml, create_directories
 
 # Configuration manager class
@@ -90,5 +90,16 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    # Get the configuration of the model
+    def get_validation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model = Path("C:/Users/Ronan/Documents/ML/Image_Classification/Picture_Classification_ML_Project/artifacts/training/model.keras"),
+            training_data = Path("C:/Users/Ronan/Documents/ML/Image_Classification/Picture_Classification_ML_Project/artifacts/data_ingestion/Chicken-fecal-images"),
+            all_params = self.params,
+            params_image_size = self.params.IMAGE_SIZE,
+            params_batch_size = self.params.BATCH_SIZE
+        )
+        return eval_config
 
       
